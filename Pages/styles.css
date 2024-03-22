@@ -1,0 +1,390 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} 
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #B8A0D9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D92546;
+}
+
+/* BODY STYLING */
+
+body {
+  font-family: "Krona One", sans-serif;
+  color: white;
+  background-color: #190426;
+  overflow-x: hidden;
+}
+
+/* NAV BAR STYLING */
+.nav-bar {
+  background-color: #5d04d9;
+  margin: auto;
+  height: 125px;
+  padding-top: 10px;
+  position: sticky;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content :is(.home, .artist, .news) {
+  font-family: "Krona One", sans-serif;
+  font-size: 50px;
+  margin: 20px 50px;
+}
+
+.nav-content :is(a) {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-content :is(.home, .artist, .news) :hover {
+  text-decoration: none;
+  color: #190426;
+}
+
+/* LANDING ZONE */
+
+.marquee marquee {
+  color: white;
+}
+
+.carousel-inner :is(img) {
+  height: 1000px;
+  object-fit: cover;
+  object-position: 0% 100%;
+  /* mix-blend-mode: color-dodge; */
+  /* opacity: .75; */
+}
+
+.landing-container {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  width: 100%;
+}
+
+.vibe-text {
+  font-size: 130px;
+  margin-bottom: 100px;
+  text-shadow: 4px 4px #D92546;
+}
+
+.locations {
+  font-size: 60px;
+  line-height: 75px;
+  text-shadow: 4px 4px #D92546;
+}
+
+.landing-container img {
+  float: right;
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+}
+
+#albany {
+  transform: scale(80%);
+}
+
+/* ARTIST AREA */
+
+.artist-list {
+  margin: 70px 0px 100px 0px;
+}
+
+.artist-list :is(a) {
+  text-decoration: none;
+  color: white;
+}
+
+.artist-full {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.artist-container {
+  width: 90%;
+  height: auto;
+}
+
+.artist-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  gap: 70px;
+  overflow-x: scroll;
+
+}
+
+.artist-images img {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px#5d04d9;
+}
+
+#fa {
+  margin-left: 30px;
+}
+
+#saa {
+  float: right;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+/* ABOUT AREA */
+
+.about-container {
+  height: 600px;
+  width: 100%;
+  background: rgb(25,4,38);
+  background: linear-gradient(0deg, rgba(25,4,38,1) 0%, rgba(93,4,217,1) 100%);
+}
+
+.about-words p {
+  text-align: center;
+  margin: 20px 50px;
+}
+
+#about-title {
+  font-size: 40px;
+  text-shadow: 4px 4px #D92546;
+}
+
+/* FOUNDERS AREA */
+
+.founders-container {
+  margin: 50px 0px 100px 0px;
+}
+
+.ckj :is(.collins p, .kahmal p, .joe p) {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#ccc {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 2px 2px #D92546;
+}
+
+.ckj {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.ckj img {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px #D92546;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.learn-more button{
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid #D92546; */
+  box-shadow: 2px 2px 5px#D92546;
+  border-radius: 100%;
+  outline: none;
+  background: #5d04d98a;
+  -webkit-backdrop-filter: blur(20px);
+
+}
+
+/* MODAL  */
+
+.modal-cont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+
+  background: rgba(93, 4, 217, 0.44);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(93, 4, 217, 1);
+
+  z-index: 10;
+  max-width: 80%;
+  width: 750px;
+  
+}
+
+.modal-cont.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #190426;
+}
+
+.modal-header .m-title {
+  font-size: 1.25rem;
+}
+
+.modal-cont .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+
+/* FOOTER STYLING */
+
+.vio-footer {
+  position: relative;
+  bottom: 0%;
+  height: 200px;
+  width: 100%;
+  background: rgb(25,4,38);
+  background: linear-gradient(0deg, rgba(25,4,38,1) 0%, rgba(93,4,217,1) 100%);
+}
+
+.f-container {
+  margin: 20px 0px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 100px;
+  color: white;
+}
+
+/* FAR LEFT AREA */
+
+.f-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#f-left-title {
+  font-size: 30px;
+}
+
+.f-top {
+  font-size: 11px;
+  text-align: center;
+}
+
+.f-top a {
+  text-decoration: none;
+  color: white;
+}
+
+/* NAVIGATION AREA */
+
+.f-nav {
+  display: flex;
+  flex-direction: column;
+}
+.f-nav :is(li, a) {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  line-height: 50px;
+}
+
+/* FOLLOW US / SOCIAL MEDIA AREA */
+
+.f-follow img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  text-wrap: nowrap;
+}
+
+/* NEWSLETTER AREA */
+
+.f-newsletter input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  opacity: 0.9;
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-indent: 10px;
+  margin-right: 10px;
+  background-color: #dfdfdf;
+}
+
+.f-newsletter button {
+  height: 40px;
+  width: 100px;
+  font-size: 15px;
+  box-shadow: 2px 2px 5px#D92546;
+  border-radius: 15px;
+  outline: none;
+  background: #5d04d98a;
+  -webkit-backdrop-filter: blur(20px);
+
+}
+
+#nresponce {
+  font-size: 11px;
+}
