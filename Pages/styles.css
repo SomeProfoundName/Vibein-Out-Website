@@ -294,7 +294,7 @@ body {
   border-radius: 100%;
   outline: none;
   background: #5d04d98a;
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 /* MODAL  */
@@ -433,7 +433,6 @@ body {
   width: 30px;
   height: 30px;
   margin-right: 20px;
-  text-wrap: nowrap;
 }
 
 /* NEWSLETTER AREA */
@@ -459,7 +458,7 @@ body {
   border-radius: 15px;
   outline: none;
   background: #5d04d98a;
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 #nresponce {
