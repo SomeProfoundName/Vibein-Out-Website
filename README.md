@@ -1,4 +1,4 @@
-<img src="./vibeinout-website.png" alt="vibe-in out webpage">
+<img src="./vibeinout-wesbite.png" alt="vibe-in out webpage">
 
 ## Overview
 
